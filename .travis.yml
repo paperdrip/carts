@@ -1,9 +1,10 @@
+dist: xenial
 language: java
 sudo: required
 services:
   - docker
 jdk:
-  - oraclejdk8
+  - openjdk8
 install: true
 
 env:
