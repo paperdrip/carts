@@ -5,6 +5,8 @@ set -ev
 export BUILD_VERSION="0.0.2-SNAPSHOT"
 export BUILD_DATE=`date +%Y-%m-%dT%T%z`
 
+echo $BUILD_DATE
+
 SCRIPT_DIR=$(dirname "$0")
 
 if [[ -z "$GROUP" ]] ; then
@@ -23,6 +25,7 @@ else
     DOCKER_CMD="sudo docker"
 fi
 CODE_DIR=$(cd $SCRIPT_DIR/..; pwd)
+echo "CODE_DIR"
 echo $CODE_DIR
 $DOCKER_CMD run --rm -v $HOME/.m2:/root/.m2 -v $CODE_DIR:/usr/src/mymaven -w /usr/src/mymaven maven:3.2-jdk-8 mvn -q -DskipTests package
 
