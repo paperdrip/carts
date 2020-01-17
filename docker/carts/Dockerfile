@@ -11,13 +11,13 @@ ARG BUILD_DATE
 ARG BUILD_VERSION
 ARG COMMIT
 
-LABEL org.label-schema.vendor="Weaveworks" \
+LABEL org.label-schema.vendor="Paperdrip" \
   org.label-schema.build-date="${BUILD_DATE}" \
   org.label-schema.version="${BUILD_VERSION}" \
   org.label-schema.name="Socks Shop: Cart" \
   org.label-schema.description="REST API for Cart service" \
-  org.label-schema.url="https://github.com/microservices-demo/carts" \
-  org.label-schema.vcs-url="github.com:microservices-demo/carts.git" \
+  org.label-schema.url="https://github.com/paperdrip/carts" \
+  org.label-schema.vcs-url="github.com:paperdrip/carts.git" \
   org.label-schema.vcs-ref="${COMMIT}" \
   org.label-schema.schema-version="1.0"
 
